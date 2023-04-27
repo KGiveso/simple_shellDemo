@@ -31,7 +31,7 @@ int _error(char **strings, int count);
 int _putchar(char c);
 int _file(char *pathfile);
 int _execute(char **strings);
-void _grid(char **grid, int heigth);
+void _grid(char **grid, int altitude);
 int _strlen(const char *std);
 
 
