@@ -19,7 +19,7 @@ extern char **environ;
 /*Function Prototypes*/
 int _strcmp(char *cmd, char *argv);
 int _path(char **strings);
-int _builtins(char **strings, int exit_stat);
+int _builtin(char **strings, int exit_stat);
 char *_env(char *local_var);
 char *_strdup(char *std);
 char *append_command(char *dir_path, char *instruct);
