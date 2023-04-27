@@ -20,7 +20,7 @@ int main(void)
 			_inputs(in, strings);
 			if (strings[0] != NULL)
 			{
-				exist_stat = check_file(strings[0]);
+				exist_stat = _file(strings[0]);
 				if (exist_stat != 0)
 				{
 					vf_stat = _path(strings);
@@ -28,7 +28,7 @@ int main(void)
 						exit_stat = _execute(strings), free(in), free(*strings);
 					else
 					{
-					blt_stat = builtins(strings, exit_stat);
+					blt_stat = _builtin(strings, exit_stat);
 					if (blt_stat != 0)
 						exit_stat = p_error(strings, count), free(in);
 					}
@@ -44,6 +44,6 @@ int main(void)
 		in = NULL, count++;
 		_fprint("$ ", 2), bytes_rd = getline(&in, &bf_size, stdin);
 	}
-	free_mem(in);
+	_freed(in);
 	return (exit_stat);
 }
